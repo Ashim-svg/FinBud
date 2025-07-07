@@ -1,1 +1,1 @@
-# FinBud
+# FinBudinMate is a personal finance manager web application that helps users track income, expenses, set budgets, and visualize financial reports. This repository contains the **frontend** built with **React** and **Vite**.
