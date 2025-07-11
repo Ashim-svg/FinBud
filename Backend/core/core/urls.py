@@ -20,4 +20,6 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('auth/', include('Auth.urls')),
+    path('api/auth/', include('djoser.urls')),      # Djoser’s built-in auth endpoints
+    path('api/auth/', include('djoser.urls.jwt')),
 ]

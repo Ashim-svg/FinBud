@@ -122,3 +122,25 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+AUTH_USER_MODEL = 'Auth.User'
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
+}
+
+DJOSER = {
+    'USER_ID_FIELD': 'id',
+    'LOGIN_FIELD': 'username',
+    'SERIALIZERS': {
+        'user_create': 'Auth.serializers.UserSerializer',
+        'user': 'Auth.serializers.UserSerializer',
+        'current_user': 'Auth.serializers.UserSerializer',
+    },
+}
+
+
